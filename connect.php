@@ -1,15 +1,7 @@
-<!-- <?
-$link = @mysqli_connect("localhost", "root", "12345678", "project")or die(mysqli_connect_error());
-$sql = "select * from user";
-$result = mysqli_query($link,$sql);
-while ($data = mysqli_fetch_array($result)) {
-  echo $data['email'];
-}
 
-?> -->
 
 <?php
-$servername = "localhost";
+$servername = "192.168.99.100:3306";
 $username = "root";
 $password = "12345678";
 

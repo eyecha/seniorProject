@@ -55,19 +55,17 @@
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw1"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw1" required>
 
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+      <label for="psw2"><b>Re-enter password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw2" required>
+
+      <button type="submit">Register</button>
+   
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
+
   </form>
 </div>
 
@@ -89,6 +87,15 @@ $(document).ready(function () {
         this.style.display = "none";
     }
   });
+
+  $("#id02 > form > div.container > button").click(function(event) {
+ 
+    var pw2 =  $("#id02 > form > div.container > input[type='password']:nth-child(6)").val()
+    var pw1 =  $("#id02 > form > div.container > input[type='password']:nth-child(4)").val()
+    console.log(pw1)
+    console.log(pw2)
+  });
+
 
 
 });
