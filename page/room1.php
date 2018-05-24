@@ -1,4 +1,4 @@
- <?php include("connect.php"); ?>
+ <?php include("../Mysql/connect.php"); ?>
 
 <html>
 <head>
