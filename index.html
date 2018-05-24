@@ -16,7 +16,7 @@
 
 <div id="id01" class="modal">
 
-  <form class="modal-content animate" >
+  <form class="modal-content animate"action="chklogin.php" method="post"> >
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
@@ -62,7 +62,7 @@
       <input type="password" placeholder="Enter Password" name="psw2" required>
 
       <button type="submit">Register</button>
-   
+
     </div>
 
 
@@ -89,12 +89,18 @@ $(document).ready(function () {
   });
 
   $("#id02 > form > div.container > button").click(function(event) {
- 
+    var fileName = $("#id02 > form > div.container > input[type='text']:nth-child(2)")
     var pw2 =  $("#id02 > form > div.container > input[type='password']:nth-child(6)").val()
     var pw1 =  $("#id02 > form > div.container > input[type='password']:nth-child(4)").val()
-    console.log(pw1)
-    console.log(pw2)
+
+    if(  pw1 != pw2){
+      alert("Password not match")
+      return ;
+    }
+
   });
+
+
 
 
 
