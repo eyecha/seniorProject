@@ -17,13 +17,13 @@
 
       <figure class="image is-128x128" >
         <a href="room1.php">
-        <img src="image/bedroom.png" class="button">
+        <img src="../image/bedroom.png" class="button">
         </a>
       </figure>
 
       <figure class="image is-128x128">
         <a href="room2.php">
-        <img class="button" src="image/bathroom.png" >
+        <img class="button" src="../image/bathroom.png" >
         </a>
       </figure>
 
