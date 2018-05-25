@@ -18,13 +18,12 @@ $(document).ready(function () {
     // button switch
     ////////////////////////
     $("#sbutton1").click(function(event){
-      if(this){
-        microgear.chat("ESPChat/room1/device1","ON");3
-        $(this).addClass('clicked');
+      if(this.checked){
+        microgear.chat("ESPChat/room1/device1","ON");
+
       }
-      else if($(this).hasClass('clicked')){
+      else{
         microgear.chat("ESPChat/room1/device1","OFF");
-        $(this).removeClass('clicked');
       }
     })
     ////////////////////////
