@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+ 
   var device_1 = 0;
   var device_2 = 0;
   const APPID = "EyeSmartLight";
@@ -15,9 +16,19 @@ $(document).ready(function () {
   alias : ALIAS
 });
 
+
     // button switch
     ////////////////////////
     $("#sbutton1").click(function(event){
+
+      fetch("../Mysql/updateStatulight.php").then(function(respone) {
+      respone.json() .then(function(data) {
+        console.log(data)
+        })
+
+      })
+      .catch( error => console.log('There was an error: ', error))
+   
       if(this.checked){
         microgear.chat("ESPChat/room1/device1","ON");
 
@@ -85,6 +96,7 @@ $(document).ready(function () {
 
 
   microgear.on('message', function(topic,data){
+    
     if(data=="device1ON")
     {
       device_1 = 1;
