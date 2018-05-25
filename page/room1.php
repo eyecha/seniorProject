@@ -3,7 +3,7 @@
  <?php
  $sql = "SELECT * FROM home";
  $result = $conn->query($sql);
- 
+
  if ($result->num_rows > 0) {
      // output data of each row
      while($row = $result->fetch_assoc()) {
@@ -25,15 +25,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://NETPIE.io/microgear.js"></script>
 <script src="../js/room1.js"></script>
+<link href="../css/room.css" rel="stylesheet">
 <center>
   <section class="section">
     <div class="container">
       <div class="notification">
         <h1 id="connected_NETPIE"></h1>
+        
         <h1>device 1</h1>
         <button type="button" onclick="button_device1(1)">Turn ON</button>
         <button type="button" onclick="button_device1(0)">Turn OFF</button>
         <p><strong id="Status_device1">Load is OFF.</strong></p><br>
+
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
 
         <h1>device 2</h1>
         <button type="button" onclick="button_device2(1)">Turn ON</button>

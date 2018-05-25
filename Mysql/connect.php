@@ -1,7 +1,7 @@
 
 
 <?php
-$servername = "192.168.99.100:3306";
+$servername = "localhost";
 $username = "root";
 $password = "12345678";
 $nameDb = "project";
