@@ -23,7 +23,7 @@ $(document).ready(function () {
 
       fetch("../Mysql/updateStatulight.php").then(function(respone) {
       respone.json() .then(function(data) {
-        console.log(data)
+      //  console.log(data)
         })
 
       })
@@ -95,15 +95,49 @@ $(document).ready(function () {
 
 
 
-  microgear.on('message', function(topic,data){
-    
+  microgear.on('message', function(topic,data){    
     if(data=="device1ON")
     {
+      
+      fetch(("../Mysql/updateStatulight1.php"),
+      {
+          method: "POST",
+          mode: "same-origin",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            "statusLight": "ON",
+          })
+      }).then(function(respone) {
+        respone.json() .then(function(data) {
+            console.log(data.status)
+          })
+        })
+
+  
       device_1 = 1;
       document.getElementById("Status_device1").innerHTML =  "Load is ON.";
       document.getElementById("All_device").innerHTML =  "Load is ON.";
     }else if(data=="device1OFF")
     {
+      fetch(("../Mysql/updateStatulight1.php"),
+      {
+          method: "POST",
+          mode: "same-origin",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            "statusLight": "OFF",
+          })
+      }).then(function(respone) {
+        respone.json() .then(function(data) {
+            console.log(data.status)
+          })
+        })
       device_1 = 0;
       document.getElementById("Status_device1").innerHTML =  "Load is OFF.";
     }else if(data=="device2ON")
