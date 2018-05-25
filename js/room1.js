@@ -15,24 +15,28 @@ $(document).ready(function () {
   alias : ALIAS
 });
 
-    // button switch 
+    // button switch
     ////////////////////////
     $("#sbutton1").click(function(event){
-      if(this){ 
-        microgear.chat("ESPChat/room1/device1","ON");}
-      else{
-        microgear.chat("ESPChat/room1/device1","OFF");}
+      if(this){
+        microgear.chat("ESPChat/room1/device1","ON");3
+        $(this).addClass('clicked');
+      }
+      else if($(this).hasClass('clicked')){
+        microgear.chat("ESPChat/room1/device1","OFF");
+        $(this).removeClass('clicked');
+      }
     })
     ////////////////////////
 
 
-    
+
     function button_device1(logic){
       if(logic == 1 )
       {
         microgear.chat("ESPChat/room1/device1","ON");
 
-        
+
       }else if(logic == 0 )
       {
         microgear.chat("ESPChat/room1/device1","OFF");
