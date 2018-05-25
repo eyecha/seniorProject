@@ -38,7 +38,7 @@
         <p><strong id="Status_device1">Load is OFF.</strong></p><br>
 
         <label class="switch">
-          <input type="checkbox">
+          <input id="sbutton1"  type="checkbox">
           <span class="slider round"></span>
         </label>
 

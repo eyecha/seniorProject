@@ -15,6 +15,18 @@ $(document).ready(function () {
   alias : ALIAS
 });
 
+    // button switch 
+    ////////////////////////
+    $("#sbutton1").click(function(event){
+      if(this){ 
+        microgear.chat("ESPChat/room1/device1","ON");}
+      else{
+        microgear.chat("ESPChat/room1/device1","OFF");}
+    })
+    ////////////////////////
+
+
+    
     function button_device1(logic){
       if(logic == 1 )
       {
