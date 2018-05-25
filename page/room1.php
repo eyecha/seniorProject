@@ -31,25 +31,26 @@
     <div class="container">
       <div class="notification">
         <h1 id="connected_NETPIE"></h1>
-        
-        <h1>device 1</h1>
-        <button type="button" onclick="button_device1(1)">Turn ON</button>
-        <button type="button" onclick="button_device1(0)">Turn OFF</button>
-        <p><strong id="Status_device1">Load is OFF.</strong></p><br>
 
+        <h1>device 1</h1>
         <label class="switch">
           <input id="sbutton1"  type="checkbox">
           <span class="slider round"></span>
         </label>
+        <p><strong id="Status_device1">Load is OFF.</strong></p><br>
 
         <h1>device 2</h1>
-        <button type="button" onclick="button_device2(1)">Turn ON</button>
-        <button type="button" onclick="button_device2(0)">Turn OFF</button>
+        <label class="switch">
+          <input id="sbutton2"  type="checkbox">
+          <span class="slider round"></span>
+        </label>
         <p><strong id="Status_device2">Load is OFF.</strong></p><br>
 
         <h1>All devices</h1>
-        <button type="button" onclick="All_room1(1)">Turn ON</button>
-        <button type="button" onclick="All_room1(0)">Turn OFF</button>
+        <label class="switch">
+          <input id="sbutton_all"  type="checkbox">
+          <span class="slider round"></span>
+        </label>
         <p><strong id="All_device">Load is OFF.</strong></p>
 
         <h1>LDR Sensor</h1>

@@ -26,6 +26,26 @@ $(document).ready(function () {
         microgear.chat("ESPChat/room1/device1","OFF");
       }
     })
+
+    $("#sbutton2").click(function(event){
+      if(this.checked){
+        microgear.chat("ESPChat/room1/device2","ON");
+
+      }
+      else{
+        microgear.chat("ESPChat/room1/device2","OFF");
+      }
+    })
+
+    $("#sbutton_all").click(function(event){
+      if(this.checked){
+        microgear.chat("ESPChat/room1/alldevices","ON");
+
+      }
+      else{
+        microgear.chat("ESPChat/room1/alldevices","OFF");
+      }
+    })
     ////////////////////////
 
 
